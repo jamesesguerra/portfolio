@@ -22,10 +22,29 @@ body {
 
 :root {
     --clr-gray: #F8FAFC;
+    --clr-dark-gray: #81828a;
+    --clr-slate-gray: #8b97a8;
+    --clr-dark-slate-gray: #1c2739;
     --clr-white: #fff;
+    --clr-about-contact-white: #fff;
     --clr-orange: #D84000;
     --clr-black: #000;
     --clr-lt-blue: #CBD5E1;
+    --clr-dark-blue: #334155;
+    --clr-footer: #334155; 
+}
+
+:root.toggle {
+    --clr-gray: #1c2739;
+    --clr-dark-gray: #81828a;
+    --clr-slate-gray: #8b97a8;
+    --clr-white: #0f1629;
+    --clr-about-contact-white:#1c2739;
+    --clr-orange: #D84000;
+    --clr-black: #fff;
+    --clr-lt-blue: #CBD5E1;
+    --clr-dark-blue: #94a3b8;
+    --clr-footer: #0f1629; 
 }
 
 nav {
@@ -41,6 +60,15 @@ nav {
         max-width: 990px;
         margin: 0 auto;
         z-index: 2;
+
+        &__icon {
+            width: 45px;
+            a {
+                img {
+                    width: 100%;
+                }
+            }
+        }
         ul {
             display: flex;
             gap: 20px;
@@ -53,6 +81,10 @@ nav {
                 button {
                     border: none;
                     background: transparent;
+                    color: var(--clr-black);
+                    i {
+                        color: var(--clr-dark-blue);
+                    }
                 }
             }
         }
@@ -62,6 +94,7 @@ nav {
 .landing {
     text-align: center;
     padding: 10rem 3rem 10rem 3rem;
+    background: var(--clr-white);
     h1 {
         font-family: $custom-serif;
         font-weight: medium;
@@ -81,7 +114,17 @@ nav {
             background: var(--clr-orange);
             border-radius: 5px;
             padding: 2px 8px;
-            color: var(--clr-white);
+            color: white;
+        }
+    }
+
+    &__more__header {
+        display: flex;
+        justify-content: space-between;
+        a {
+            text-decoration: none;
+            font-size: 0.8rem;
+            color: var(--clr-black);
         }
     }
 
@@ -95,8 +138,9 @@ nav {
             text-decoration: none;
             flex: 1 1 300px;
             border-radius: 8px;
+            text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px;
             div {
-                color: var(--clr-white);
+                color: white;
                 height: 7rem;
                 padding: 2rem 1rem 2rem 1rem;
             }
@@ -128,9 +172,13 @@ nav {
             flex: 1 1 300px;
             background: var(--clr-orange);
             border-radius: 8px;
-            color: var(--clr-white);
+            color: white;
             padding: .5rem;
             min-height: 180px;
+            text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px;
+            ul {
+                column-count: 2;
+            }
             h3 {
                 font-weight: lighter;
             }
@@ -152,6 +200,7 @@ nav {
 
 .about {
     padding: 7rem 0 5rem 0;
+    background: var(--clr-about-contact-white);
     &__img {
         width: 100%;
         margin-bottom: 1rem;
@@ -164,6 +213,7 @@ nav {
 
 .contact {
     padding-bottom: 5rem;
+    background: var(--clr-about-contact-white);
     input, textarea {
         border: 1px solid var(--clr-black);
     }
@@ -175,12 +225,12 @@ nav {
 
 
 footer {
-    background: #334155;
+    background: var(--clr-footer);
     padding: 3rem 0 3rem 0;
     .social {
         h3 {
             font-weight: lighter;
-            color: var(--clr-white);
+            color: white;
         }
         ul {
             display: flex;
@@ -214,6 +264,7 @@ span {
     margin-bottom: 1rem;
     display: inline-block;
     letter-spacing: 1px;
+    color: var(--clr-black);
 }
 
 .projects, .stack,
@@ -222,7 +273,7 @@ span {
     padding-right: 1rem;
 }
 
-.landing, .projects__latest, 
+.projects__latest, 
 .projects__more, .stack__wrapper,
 .about, .contact {
     max-width: 990px;
