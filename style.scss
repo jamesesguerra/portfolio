@@ -10,7 +10,7 @@ html {
 *, *::before, *::after {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 body {
@@ -52,8 +52,8 @@ nav {
     background: var(--clr-white);
     position: fixed;
     top: 0;
-    right: 0;
     left: 0;
+    right: 0;
     z-index: 10;
     .nav {
         display: flex;
@@ -145,11 +145,12 @@ nav {
             div {
                 color: white;
                 height: 7rem;
-                position: relative;
-                top: 70px;
-                left: 20px;
                 h3 {
                     font-weight: lighter;
+                    position: relative;
+                    top: 70px;
+                    left: 20px;
+                    display: inline;
                 }
             }
             

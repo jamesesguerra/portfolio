@@ -7,7 +7,7 @@ html {
 *, *::before, *::after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
@@ -49,8 +49,8 @@ nav {
   background: var(--clr-white);
   position: fixed;
   top: 0;
-  right: 0;
   left: 0;
+  right: 0;
   z-index: 10;
 }
 nav .nav {
@@ -142,12 +142,13 @@ nav .nav ul li button i {
 .projects__more__container a div {
   color: white;
   height: 7rem;
-  position: relative;
-  top: 70px;
-  left: 20px;
 }
 .projects__more__container a div h3 {
   font-weight: lighter;
+  position: relative;
+  top: 70px;
+  left: 20px;
+  display: inline;
 }
 .projects__more__container a:nth-of-type(1) {
   background-image: linear-gradient(to top right, #A774F2, #F25D76, #FF964F);
