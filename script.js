@@ -14,8 +14,7 @@ const setupModeToggle = () => {
     const buttonToggle = document.querySelector('.nav button');
     const root = document.querySelector(':root');
     buttonToggle.addEventListener('click', () => {
-        root.classList.toggle('toggle');
-        
+        root.classList.toggle('toggle');     
     })
 }
 
