@@ -64,6 +64,9 @@ nav {
 
         &__icon {
             width: 45px;
+            path {
+                fill: var(--clr-black);
+            }
         }
         ul {
             display: flex;
@@ -80,7 +83,6 @@ nav {
                     color: var(--clr-black);
                     i {
                         color: var(--clr-dark-blue);
-                        font-size: 1.1rem;
                     }
                 }
             }

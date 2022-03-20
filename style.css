@@ -63,6 +63,9 @@ nav .nav {
 nav .nav__icon {
   width: 45px;
 }
+nav .nav__icon path {
+  fill: var(--clr-black);
+}
 nav .nav ul {
   display: flex;
   gap: 20px;
@@ -81,7 +84,6 @@ nav .nav ul li button {
 }
 nav .nav ul li button i {
   color: var(--clr-dark-blue);
-  font-size: 1.1rem;
 }
 
 .landing {
