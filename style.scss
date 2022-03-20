@@ -54,6 +54,7 @@ nav {
     top: 0;
     right: 0;
     left: 0;
+    z-index: 10;
     .nav {
         display: flex;
         justify-content: space-between;
@@ -63,11 +64,6 @@ nav {
 
         &__icon {
             width: 45px;
-            a {
-                img {
-                    width: 100%;
-                }
-            }
         }
         ul {
             display: flex;
@@ -84,6 +80,7 @@ nav {
                     color: var(--clr-black);
                     i {
                         color: var(--clr-dark-blue);
+                        font-size: 1.1rem;
                     }
                 }
             }
@@ -125,6 +122,10 @@ nav {
             text-decoration: none;
             font-size: 0.8rem;
             color: var(--clr-black);
+            letter-spacing: 1px;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     }
 
@@ -142,7 +143,12 @@ nav {
             div {
                 color: white;
                 height: 7rem;
-                padding: 2rem 1rem 2rem 1rem;
+                position: relative;
+                top: 70px;
+                left: 20px;
+                h3 {
+                    font-weight: lighter;
+                }
             }
             
         }
@@ -173,7 +179,7 @@ nav {
             background: var(--clr-orange);
             border-radius: 8px;
             color: white;
-            padding: .5rem;
+            padding: .5rem 1rem 0 1rem;
             min-height: 180px;
             text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px;
             ul {
@@ -199,7 +205,7 @@ nav {
 
 
 .about {
-    padding: 7rem 0 5rem 0;
+    padding: 5rem 0 5rem 0;
     background: var(--clr-about-contact-white);
     &__img {
         width: 100%;
@@ -214,6 +220,9 @@ nav {
 .contact {
     padding-bottom: 5rem;
     background: var(--clr-about-contact-white);
+    h2 {
+        text-align: center;
+    }
     input, textarea {
         border: 1px solid var(--clr-black);
     }
@@ -273,9 +282,8 @@ span {
     padding-right: 1rem;
 }
 
-.projects__latest, 
-.projects__more, .stack__wrapper,
-.about, .contact {
+.projects__latest, .about__wrapper,
+.projects__more, .stack__wrapper {
     max-width: 990px;
     margin: 0 auto;
 }
@@ -284,4 +292,9 @@ h2 {
     font-family: $custom-serif;
     font-size: 1.953rem;
     margin-bottom: 1rem;
+}
+
+.contact__wrapper {
+    max-width: 700px;
+    margin: 0 auto;
 }

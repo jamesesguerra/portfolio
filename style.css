@@ -51,6 +51,7 @@ nav {
   top: 0;
   right: 0;
   left: 0;
+  z-index: 10;
 }
 nav .nav {
   display: flex;
@@ -61,9 +62,6 @@ nav .nav {
 }
 nav .nav__icon {
   width: 45px;
-}
-nav .nav__icon a img {
-  width: 100%;
 }
 nav .nav ul {
   display: flex;
@@ -83,6 +81,7 @@ nav .nav ul li button {
 }
 nav .nav ul li button i {
   color: var(--clr-dark-blue);
+  font-size: 1.1rem;
 }
 
 .landing {
@@ -119,6 +118,10 @@ nav .nav ul li button i {
   text-decoration: none;
   font-size: 0.8rem;
   color: var(--clr-black);
+  letter-spacing: 1px;
+}
+.projects__more__header a:hover {
+  text-decoration: underline;
 }
 .projects__more__container {
   display: flex;
@@ -137,7 +140,12 @@ nav .nav ul li button i {
 .projects__more__container a div {
   color: white;
   height: 7rem;
-  padding: 2rem 1rem 2rem 1rem;
+  position: relative;
+  top: 70px;
+  left: 20px;
+}
+.projects__more__container a div h3 {
+  font-weight: lighter;
 }
 .projects__more__container a:nth-of-type(1) {
   background-image: linear-gradient(to top right, #A774F2, #F25D76, #FF964F);
@@ -165,7 +173,7 @@ nav .nav ul li button i {
   background: var(--clr-orange);
   border-radius: 8px;
   color: white;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem 0 1rem;
   min-height: 180px;
   text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px;
 }
@@ -187,7 +195,7 @@ nav .nav ul li button i {
 }
 
 .about {
-  padding: 7rem 0 5rem 0;
+  padding: 5rem 0 5rem 0;
   background: var(--clr-about-contact-white);
 }
 .about__img {
@@ -202,6 +210,9 @@ nav .nav ul li button i {
 .contact {
   padding-bottom: 5rem;
   background: var(--clr-about-contact-white);
+}
+.contact h2 {
+  text-align: center;
 }
 .contact input, .contact textarea {
   border: 1px solid var(--clr-black);
@@ -256,9 +267,8 @@ span {
   padding-right: 1rem;
 }
 
-.projects__latest,
-.projects__more, .stack__wrapper,
-.about, .contact {
+.projects__latest, .about__wrapper,
+.projects__more, .stack__wrapper {
   max-width: 990px;
   margin: 0 auto;
 }
@@ -267,4 +277,9 @@ h2 {
   font-family: "Crimson Pro", Georgia, Times, "Times New Roman", serif;
   font-size: 1.953rem;
   margin-bottom: 1rem;
+}
+
+.contact__wrapper {
+  max-width: 700px;
+  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */
