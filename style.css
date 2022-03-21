@@ -24,11 +24,13 @@ body {
   --clr-dark-slate-gray: #1c2739;
   --clr-white: #fff;
   --clr-about-contact-white: #fff;
-  --clr-orange: #D84000;
+  --clr-orange: #ea580c;
   --clr-black: #000;
   --clr-lt-blue: #CBD5E1;
   --clr-dark-blue: #334155;
   --clr-footer: #334155;
+  --clr-p: #000;
+  --clr-span: #000;
 }
 
 :root.toggle {
@@ -42,6 +44,8 @@ body {
   --clr-lt-blue: #CBD5E1;
   --clr-dark-blue: #94a3b8;
   --clr-footer: #0f1629;
+  --clr-p: #c1cbd7;
+  --clr-span: #818fa3;
 }
 
 nav {
@@ -57,12 +61,9 @@ nav .nav {
   display: flex;
   justify-content: space-between;
   max-width: 990px;
-  min-width: 360px;
+  flex: 1 1 200px;
   margin: 0 auto;
   z-index: 2;
-}
-nav .nav__icon {
-  width: 45px;
 }
 nav .nav__icon path {
   fill: var(--clr-black);
@@ -82,9 +83,13 @@ nav .nav ul li button {
   border: none;
   background: transparent;
   color: var(--clr-black);
+  padding: 0 5px 0 5px;
 }
 nav .nav ul li button i {
   color: var(--clr-dark-blue);
+}
+nav .nav ul li:nth-child(-n+3):hover {
+  border-bottom: 1px solid var(--clr-black);
 }
 
 .landing {
@@ -98,6 +103,10 @@ nav .nav ul li button i {
   letter-spacing: 1px;
   font-size: 2.441rem;
 }
+.landing p {
+  max-width: 400px;
+  margin: 0 auto 1rem auto;
+}
 
 .projects {
   padding: 3rem 0 5rem 0;
@@ -110,25 +119,30 @@ nav .nav ul li button i {
   border: none;
   background: var(--clr-orange);
   border-radius: 5px;
-  padding: 2px 8px;
+  padding: 2px 10px;
   color: white;
+}
+.projects__latest button:hover {
+  background: #da4f0c;
 }
 .projects__more__header {
   display: flex;
   justify-content: space-between;
+  align-content: flex-start;
 }
 .projects__more__header a {
   text-decoration: none;
   font-size: 0.8rem;
   color: var(--clr-black);
+  align-self: flex-start;
   letter-spacing: 1px;
 }
-.projects__more__header a:hover {
-  text-decoration: underline;
+.projects__more__header a:hover span:nth-of-type(1) {
+  border-bottom: 1px solid var(--clr-black);
 }
 .projects__more__container {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   -moz-column-gap: 25px;
        column-gap: 25px;
   row-gap: 15px;
@@ -137,7 +151,7 @@ nav .nav ul li button i {
   display: inline-block;
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   text-decoration: none;
-  flex: 1 1 300px;
+  flex: 1;
   border-radius: 8px;
   text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px;
 }
@@ -151,6 +165,7 @@ nav .nav ul li button i {
   top: 70px;
   left: 20px;
   display: inline;
+  font-size: 1.563rem;
 }
 .projects__more__container a:nth-of-type(1) {
   background-image: linear-gradient(to top right, #A774F2, #F25D76, #FF964F);
@@ -199,21 +214,8 @@ nav .nav ul li button i {
   background-image: linear-gradient(to top right, #511a2a, #cb598d, #b24ecb, #ebb8eb);
 }
 
-.about {
-  padding: 3rem 0 5rem 0;
-  background: var(--clr-about-contact-white);
-}
-.about__img {
-  width: 100%;
-  margin-bottom: 1rem;
-}
-.about__img img {
-  max-width: 100%;
-  border-radius: 8px;
-}
-
 .contact {
-  padding-bottom: 5rem;
+  padding: 5rem 0 5rem 0;
   background: var(--clr-about-contact-white);
 }
 .contact h2 {
@@ -225,6 +227,9 @@ nav .nav ul li button i {
 .contact button {
   background: var(--clr-orange);
   border: none;
+}
+.contact button:hover, .contact button:focus {
+  background: #da4f0c;
 }
 
 .footer {
@@ -253,24 +258,24 @@ nav .nav ul li button i {
   font-size: 1rem;
 }
 
-span {
+span.accent {
   background: var(--clr-white);
   border-radius: 8px;
-  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  padding: 0.3rem 0.5rem 0.3rem 0.5rem;
   font-size: 0.8rem;
   margin-bottom: 1.2rem;
   display: inline-block;
   letter-spacing: 1px;
-  color: var(--clr-black);
+  color: var(--clr-span);
 }
 
 .projects, .stack,
-.about, .contact, .footer {
+.contact, .footer {
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.projects__latest, .about__wrapper,
+.projects__latest,
 .projects__more, .stack__wrapper {
   max-width: 990px;
   margin: 0 auto;
@@ -292,4 +297,17 @@ h2 {
 .stack__container__card:active,
 .projects__more__container a:active {
   transform: translateY(-7px);
+}
+
+p {
+  color: var(--clr-p);
+}
+
+@media only screen and (min-width: 48em) {
+  .projects__more__container {
+    flex-direction: row;
+  }
+  .projects__more__container h3 {
+    font-size: 1.25rem;
+  }
 }/*# sourceMappingURL=style.css.map */

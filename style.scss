@@ -27,11 +27,13 @@ body {
     --clr-dark-slate-gray: #1c2739;
     --clr-white: #fff;
     --clr-about-contact-white: #fff;
-    --clr-orange: #D84000;
+    --clr-orange: #ea580c;
     --clr-black: #000;
     --clr-lt-blue: #CBD5E1;
     --clr-dark-blue: #334155;
     --clr-footer: #334155; 
+    --clr-p: #000;
+    --clr-span: #000;
 }
 
 :root.toggle {
@@ -45,6 +47,8 @@ body {
     --clr-lt-blue: #CBD5E1;
     --clr-dark-blue: #94a3b8;
     --clr-footer: #0f1629; 
+    --clr-p: #c1cbd7;
+    --clr-span: #818fa3;
 }
 
 nav {
@@ -59,12 +63,11 @@ nav {
         display: flex;
         justify-content: space-between;
         max-width: 990px;
-        min-width: 360px;
+        flex: 1 1 200px;
         margin: 0 auto;
         z-index: 2;
 
         &__icon {
-            width: 45px;
             path {
                 fill: var(--clr-black);
             }
@@ -82,10 +85,14 @@ nav {
                     border: none;
                     background: transparent;
                     color: var(--clr-black);
+                    padding: 0 5px 0 5px;
                     i {
                         color: var(--clr-dark-blue);
                     }
                 }
+            }
+            li:nth-child(-n+3):hover {
+                border-bottom: 1px solid var(--clr-black);
             }
         }
     }
@@ -101,6 +108,10 @@ nav {
         letter-spacing: 1px;
         font-size: 2.441rem;
     }
+    p {
+        max-width: 400px;
+        margin: 0 auto 1rem auto;
+    }
 }
 
 .projects {
@@ -113,35 +124,42 @@ nav {
             border: none;
             background: var(--clr-orange);
             border-radius: 5px;
-            padding: 2px 8px;
+            padding: 2px 10px;
             color: white;
         }
+        button:hover {
+            background: #da4f0c;
+        }   
     }
 
     &__more__header {
         display: flex;
         justify-content: space-between;
+        align-content: flex-start;
         a {
             text-decoration: none;
             font-size: 0.8rem;
             color: var(--clr-black);
+            align-self: flex-start;
             letter-spacing: 1px;
         }
         a:hover {
-            text-decoration: underline;
+            span:nth-of-type(1) {
+                border-bottom: 1px solid var(--clr-black);
+            }
         }
     }
 
     &__more__container {
         display: flex;
-        flex-wrap: wrap;
+        flex-flow: column wrap;
         column-gap: 25px;
         row-gap: 15px;
         a {
             display: inline-block;
             transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
             text-decoration: none;
-            flex: 1 1 300px;
+            flex: 1;
             border-radius: 8px;
             text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px;
             div {
@@ -153,6 +171,7 @@ nav {
                     top: 70px;
                     left: 20px;
                     display: inline;
+                    font-size: 1.563rem;
                 }
             }
             
@@ -208,22 +227,8 @@ nav {
     }
 }
 
-
-.about {
-    padding: 3rem 0 5rem 0;
-    background: var(--clr-about-contact-white);
-    &__img {
-        width: 100%;
-        margin-bottom: 1rem;
-        img {
-            max-width: 100%;
-            border-radius: 8px;
-        }
-    }
-}
-
 .contact {
-    padding-bottom: 5rem;
+    padding: 5rem 0 5rem 0;
     background: var(--clr-about-contact-white);
     h2 {
         text-align: center;
@@ -235,13 +240,16 @@ nav {
         background: var(--clr-orange);
         border: none;
     }
+    button:hover, button:focus {
+        background: #da4f0c;
+    }
 }
-
 
 .footer {
     background: var(--clr-footer);
     padding: 3rem 0 3rem 0;
     &__social {
+        
         display: flex;
         justify-content: center;
         gap: 20px;
@@ -266,24 +274,24 @@ nav {
 
 
 // utility classes
-span {
+span.accent {
     background: var(--clr-white);
     border-radius: 8px;
-    padding: .2rem .5rem .2rem .5rem;
+    padding: .3rem .5rem .3rem .5rem;
     font-size: 0.8rem;
     margin-bottom: 1.2rem;
     display: inline-block;
     letter-spacing: 1px;
-    color: var(--clr-black);
+    color: var(--clr-span);
 }
 
 .projects, .stack,
-.about, .contact, .footer {
+.contact, .footer {
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
-.projects__latest, .about__wrapper,
+.projects__latest,
 .projects__more, .stack__wrapper {
     max-width: 990px;
     margin: 0 auto;
@@ -305,4 +313,24 @@ h2 {
 .stack__container__card:active, 
 .projects__more__container a:active {
     transform: translateY(-7px);
+}
+
+p {
+    color: var(--clr-p);
+}
+
+// media queries
+
+@media only screen and (min-width: 48em) {
+    .projects {
+        &__more {
+
+            &__container {
+                flex-direction: row;
+                h3 {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
 }
