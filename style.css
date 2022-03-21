@@ -48,6 +48,21 @@ body {
   --clr-span: #818fa3;
 }
 
+.skip-link {
+  background: var(--clr-white);
+  height: 50px;
+  z-index: 11;
+  padding: 8px;
+  position: absolute;
+  transform: translateY(-100%);
+  text-decoration: none;
+  color: var(--clr-black);
+}
+
+.skip-link:focus {
+  transform: translateY(20%);
+}
+
 nav {
   padding: 1.2rem 1.2rem 0rem 1.2rem;
   background: var(--clr-white);
