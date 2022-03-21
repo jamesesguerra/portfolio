@@ -62,12 +62,17 @@ nav {
     .nav {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         max-width: 990px;
         flex: 1 1 200px;
         margin: 0 auto;
         z-index: 2;
 
         &__icon {
+            width: 30px;
+            svg {
+                padding-bottom: 10px;
+            }
             path {
                 fill: var(--clr-black);
             }
@@ -92,7 +97,8 @@ nav {
                 }
             }
             li:nth-child(-n+3):hover {
-                border-bottom: 1px solid var(--clr-black);
+                text-decoration: underline;
+                text-underline-offset: 4px;
             }
         }
     }
@@ -119,6 +125,7 @@ nav {
     background: var(--clr-gray);
 
     &__latest {
+        padding-top: 5rem;
         padding-bottom: 5rem;
         button {
             border: none;
@@ -204,7 +211,7 @@ nav {
             border-radius: 8px;
             color: white;
             padding: .5rem 1rem 0 1rem;
-            min-height: 180px;
+            min-height: 160px;
             text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px;
             ul {
                 column-count: 2;
@@ -334,3 +341,72 @@ p {
         }
     }
 }
+
+@media only screen and (min-width: 64em) {
+    .nav {
+        &__icon {
+            svg {
+                width: 40px;
+            }
+        }
+        a {
+            font-size: 1.125rem;
+        }
+    }
+    .landing {
+        padding: 14rem 3rem 14rem 3rem;
+        h1 {
+            font-size: 3.052rem;
+        }
+        p {
+            font-size: 1.125rem;
+            max-width: 450px;
+        }
+    }
+    main {
+        h2 {
+            font-size: 2.441rem;
+        }
+        p {
+            font-size: 1.125rem;
+        }
+        .projects__more__container__card {
+            min-height: 200px;
+            h3 {
+                top: 150px !important;
+            }
+        }
+    }
+    .contact {
+        h2 {
+            font-size: 2.441rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 80em) {
+    .landing {
+        h1 {
+            font-size: 3.815rem;
+        }
+        p {
+            font-size: 1.313rem;
+        }
+    }
+
+    main {
+        h2 {
+            font-size: 3.052rem;
+        }
+
+        span.accent {
+            font-size: 0.875rem;
+        }
+    }
+
+    .contact {
+        h2 {
+            font-size: 3.052rem;
+        }
+    }
+} 

@@ -60,10 +60,17 @@ nav {
 nav .nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   max-width: 990px;
   flex: 1 1 200px;
   margin: 0 auto;
   z-index: 2;
+}
+nav .nav__icon {
+  width: 30px;
+}
+nav .nav__icon svg {
+  padding-bottom: 10px;
 }
 nav .nav__icon path {
   fill: var(--clr-black);
@@ -89,7 +96,8 @@ nav .nav ul li button i {
   color: var(--clr-dark-blue);
 }
 nav .nav ul li:nth-child(-n+3):hover {
-  border-bottom: 1px solid var(--clr-black);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .landing {
@@ -113,6 +121,7 @@ nav .nav ul li:nth-child(-n+3):hover {
   background: var(--clr-gray);
 }
 .projects__latest {
+  padding-top: 5rem;
   padding-bottom: 5rem;
 }
 .projects__latest button {
@@ -194,7 +203,7 @@ nav .nav ul li:nth-child(-n+3):hover {
   border-radius: 8px;
   color: white;
   padding: 0.5rem 1rem 0 1rem;
-  min-height: 180px;
+  min-height: 160px;
   text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px;
 }
 .stack__container__card ul {
@@ -309,5 +318,60 @@ p {
   }
   .projects__more__container h3 {
     font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 64em) {
+  .nav__icon svg {
+    width: 40px;
+  }
+  .nav a {
+    font-size: 1.125rem;
+  }
+
+  .landing {
+    padding: 14rem 3rem 14rem 3rem;
+  }
+  .landing h1 {
+    font-size: 3.052rem;
+  }
+  .landing p {
+    font-size: 1.125rem;
+    max-width: 450px;
+  }
+
+  main h2 {
+    font-size: 2.441rem;
+  }
+  main p {
+    font-size: 1.125rem;
+  }
+  main .projects__more__container__card {
+    min-height: 200px;
+  }
+  main .projects__more__container__card h3 {
+    top: 150px !important;
+  }
+
+  .contact h2 {
+    font-size: 2.441rem;
+  }
+}
+@media only screen and (min-width: 80em) {
+  .landing h1 {
+    font-size: 3.815rem;
+  }
+  .landing p {
+    font-size: 1.313rem;
+  }
+
+  main h2 {
+    font-size: 3.052rem;
+  }
+  main span.accent {
+    font-size: 0.875rem;
+  }
+
+  .contact h2 {
+    font-size: 3.052rem;
   }
 }/*# sourceMappingURL=style.css.map */
