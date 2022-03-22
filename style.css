@@ -138,14 +138,14 @@ nav .nav ul li:nth-child(-n+3):hover {
 .projects__latest {
   padding-bottom: 5rem;
 }
-.projects__latest button {
-  border: none;
+.projects__latest a {
+  text-decoration: none;
   background: var(--clr-orange);
   border-radius: 5px;
   padding: 2px 10px;
   color: white;
 }
-.projects__latest button:hover {
+.projects__latest a:hover {
   background: #da4f0c;
 }
 .projects__more__header {
