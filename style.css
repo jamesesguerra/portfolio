@@ -138,6 +138,9 @@ nav .nav ul li:nth-child(-n+3):hover {
 .projects__latest {
   padding-bottom: 5rem;
 }
+.projects__latest p {
+  margin-bottom: 2rem;
+}
 .projects__latest a {
   text-decoration: none;
   background: var(--clr-orange);

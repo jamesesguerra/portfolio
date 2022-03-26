@@ -138,6 +138,9 @@ nav {
 
     &__latest {
         padding-bottom: 5rem;
+        p {
+            margin-bottom: 2rem;
+        }
         a {
             text-decoration: none;
             background: var(--clr-orange);
