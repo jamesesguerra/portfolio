@@ -342,7 +342,7 @@ p {
 }
 
 .projects__wrapper {
-  padding: 7rem 3rem 8rem 3rem;
+  padding: 7rem 1rem 8rem 1rem;
   background: var(--clr-white);
 }
 .projects__wrapper h1 {
