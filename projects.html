@@ -17,10 +17,6 @@
 </head>
 
 <body>
-    <div class="skip__link">
-        <a href="#main" class="skip-link">Skip to content</a>
-    </div>
-
     <nav>
         <div class="nav">
             <div class="nav__icon">
@@ -41,104 +37,47 @@
                 <ul>
                     <li><a href="/projects.html">Projects</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://jamesesguerra.github.io/portfolio/index.html#contact">Contact</a></li>
                     <li><button aria-label="toggle light/dark theme"><i class="fas fa-moon"></i></button></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <section class="landing">
-        <h1>Hi, I'm James!</h1>
-        <br />
-        <p>I'm a 3rd-year computer science student studying in Ateneo de Manila University. I love building web-related <a href="https://jamesesguerra.github.io/portfolio/projects.html" target="_blank">projects</a> and learning more about the web as I go.</p>
-        <p>I'm currently learning more about PHP and web accessibility. I'm also looking forward to apply my skills in the real world.</p>
-    </section>
-
-    <main id="main">
-        <div class="projects">
-            <div class="projects__latest">
-                <span class="accent">LATEST PROJECT</span>
-                <h2>Teux Deux: a todo list app made with Vue.js, Vuetify, and Firebase</h2>
-                <p>This project gives you the ability to stay on top of your tasks together with your (imaginary) team. Add new projects and get real-time updates!</p>
-                <a href="https://teux-deux.netlify.app/" target="_blank">View Project →</a>
-                
-            </div>
-
-            <div class="projects__more">
-                <div class="projects__more__header">
-                    <span class="accent">MORE PROJECTS</span>
-                    <a href="">
-                        <span>VIEW ALL</span> 
-                        <span>→</span>
-                    </a>
-                </div>
-                
-                <div class="projects__more__container">
-                    <a href="https://covid-tracker-io.netlify.app/" target="_blank">
-                        <div class="projects__more__container__card">
-                            <h3>COVID-19 Tracker</h3>
-                        </div>
-                    </a>
-                    <a href="https://citron.pages.dev/" target="_blank">
-                        <div class="projects__more__container__card">
-                            <h3>Pomodoro Timer</h3>
-                        </div>
-                    </a>
-                    <a href="https://james-todo-list.netlify.app/" target="_blank">
-                        <div class="projects__more__container__card">
-                            <h3>Simple Todo List</h3>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="stack">
-            <div class="stack__wrapper">
-                <span class="accent">MY TECH STACK</span>
-                <div class="stack__container">
-                    <div class="stack__container__card">
-                        <h3>Frontend</h3>
-                        <ul>
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>Bootstrap</li>
-                            <li>SASS</li>
-                            <li>Javascript</li> 
-                            <li>jQuery</li>
-                            <li>Vue.js</li>
-                            <li>Vuetify</li>
-                        </ul>
-                    </div>
-                    <div class="stack__container__card">
-                        <h3>Backend</h3>
-                        <ul>
-                            <li>Node.js</li>
-                            <li>Python</li>
-                            <li>PHP</li>
-                            <li>Django</li>
-                            <li>Express.js</li>
-                            <li>SQL</li>
-                            <li>Firebase</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <main>
+        <div class="projects__wrapper">
+            <h1>Projects</h1>
+            <p>So far, I've made 6 pet projects. To view the source code of each project, make sure to visit <a href="https://github.com/jamesesguerra" target="_blank" class="projects__wrapper__link">my Github account.</a></p>
+           
+            <section class="projects__wrapper__container">
+                <a href="https://teux-deux.netlify.app/" target="_blank" class="shadow">
+                    <h2>Teux Deux list web app</h2>
+                    <p>Using Vue.js and Vuetify on the frontend and Firebase's Firestore on the backend, this project gives you the ability to stay on top of your tasks together with your team. </p>
+                </a>
+                <a href="https://covid-tracker-io.netlify.app/" target="_blank" class="shadow">
+                    <h2>COVID-19 Tracker</h2>
+                    <p>I use Vue.js and TailwindCSS to create a COVID-19 Tracker that pulls data from the COVID-19 API built by Kyle Redelinghuys.</p>
+                </a>
+                <a href="https://citron.pages.dev/" target="_blank" class="shadow">
+                    <h2>Pomodoro Timer</h2>
+                    <p>To practice Javascript's setInterval and setTimeout, I made a Pomodoro timer that also includes information about the Pomodoro technique.</p>
+                </a>
+                <a href="https://james-todo-list.netlify.app/" target="_blank" class="shadow">
+                    <h2>Simple todo list</h2>
+                    <p>This todo list uses Vanilla JS combined with the power of the localStorage API to add and delete tasks.</p>
+                </a>
+                <a href="https://tempus.pages.dev/" target="_blank" class="shadow">
+                    <h2>Vanilla JS Stopwatch</h2>
+                    <p>This project also uses Javascript's setInterval to keep track of the elapsed time.</p>
+                </a>
+                <a href="https://nasa-apod.pages.dev/" target="_blank" class="shadow">
+                    <h2>NASA Astronomy Picture of the Day Site</h2>
+                    <p>I play around with NASA's Open APIs to generate the Astronomy Picture of the Day for a certain date. This project also uses Vanilla JS, HTML, and CSS.</p>
+                </a>
+            </section>
         </div>
     </main>
 
-    <section class="contact" id="contact">
-        <div class="contact__wrapper">
-            <h2>Contact</h2>
-            <form class="contact__form" data-bss-recipient="12140877fd3665a2fd4f7c3c27df2351">
-                <div class="mb-3"><label class="form-label" for="name">Name</label><input class="form-control item" type="text" id="name" required=""></div>
-                <div class="mb-3"><label class="form-label" for="email">Email</label><input class="form-control item" type="email" id="email" required=""></div>
-                <div class="mb-3"><label class="form-label" for="message">Message</label><textarea class="form-control item" id="message" required=""></textarea></div>
-                <div class="mb-3"><button class="btn btn-primary btn-lg d-block w-100" type="submit">Submit</button></div>
-            </form>
-        </div>
-    </section>
 
     <footer class="footer">
         <div class="footer__social">
@@ -179,5 +118,3 @@
     <script src="assets/js/smart-forms.min.js"></script>
     <script src="script.js"></script>
 </body>
-
-</html>
