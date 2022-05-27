@@ -23,7 +23,7 @@ body {
   --clr-slate-gray: #8b97a8;
   --clr-dark-slate-gray: #1c2739;
   --clr-white: #fff;
-  --clr-white-fade: rgba(255, 255, 255, 0.1);
+  --clr-white-fade: rgba(255, 255, 255, 0.85);
   --clr-about-contact-white: #fff;
   --clr-orange: #ea580c;
   --clr-black: #000;
@@ -396,8 +396,8 @@ p {
 }
 
 .frosty {
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 @media only screen and (min-width: 48em) {
