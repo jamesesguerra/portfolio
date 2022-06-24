@@ -23,7 +23,6 @@ body {
   --clr-slate-gray: #8b97a8;
   --clr-dark-slate-gray: #1c2739;
   --clr-white: #fff;
-  --clr-white-fade: rgba(255, 255, 255, 0.85);
   --clr-about-contact-white: #fff;
   --clr-orange: #ea580c;
   --clr-black: #000;
@@ -41,7 +40,6 @@ body {
   --clr-dark-gray: #81828a;
   --clr-slate-gray: #8b97a8;
   --clr-white: #0f1629;
-  --clr-white-fade: rgba(15, 23, 42, 0.85);
   --clr-about-contact-white:#1c2739;
   --clr-orange: #D84000;
   --clr-black: #fff;
@@ -71,7 +69,7 @@ body {
 
 nav {
   padding: 1.2rem 1.2rem 0rem 1.2rem;
-  background: var(--clr-white-fade);
+  background: var(--clr-white);
   position: fixed;
   top: 0;
   left: 0;
@@ -314,7 +312,7 @@ span.accent {
 
 .projects__latest,
 .projects__more, .stack__wrapper,
-.projects__wrapper__container {
+.projects__wrapper__container, .art__wrapper__container {
   max-width: 990px;
   margin: 0 auto;
 }
@@ -395,9 +393,23 @@ p {
   color: var(--clr-h2);
 }
 
-.frosty {
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+.art__wrapper {
+  padding: 7rem 1rem 8rem 1rem;
+  background: var(--clr-white);
+}
+.art__wrapper h1 {
+  text-align: center;
+  font-family: "Crimson Pro", Georgia, Times, "Times New Roman", serif;
+  font-weight: medium;
+  letter-spacing: 1px;
+  font-size: 2.441rem;
+  margin-bottom: 2.5rem;
+}
+.art__wrapper .row {
+  margin-top: 1rem;
+}
+.art__wrapper .drawings {
+  margin-bottom: 6rem;
 }
 
 @media only screen and (min-width: 48em) {
@@ -444,15 +456,15 @@ p {
     font-size: 2.441rem;
   }
 
-  .projects__wrapper h1 {
+  .projects__wrapper h1, .art__wrapper h1 {
     font-size: 3.052rem;
   }
 }
 @media only screen and (min-width: 80em) {
-  .landing h1, .projects__wrapper h1 {
+  .landing h1, .projects__wrapper h1, .art__wrapper h1 {
     font-size: 3.815rem;
   }
-  .landing p, .projects__wrapper p {
+  .landing p, .projects__wrapper p, .art__wrapper p {
     font-size: 1.313rem;
   }
 

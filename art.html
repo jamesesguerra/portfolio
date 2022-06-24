@@ -17,10 +17,6 @@
 </head>
 
 <body>
-    <div class="skip__link">
-        <a href="#main" class="skip-link">Skip to content</a>
-    </div>
-
     <nav class="frosty">
         <div class="nav">
             <div class="nav__icon">
@@ -41,104 +37,42 @@
                 <ul>
                     <li><a href="https://jamesesguerra.github.io/portfolio/projects.html">Projects</a></li>
                     <li><a href="https://jamesesguerra.github.io/portfolio/art.html">Art</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://jamesesguerra.github.io/portfolio/index.html#contact">Contact</a></li>
                     <li><button aria-label="toggle light/dark theme"><i class="fas fa-moon"></i></button></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <section class="landing">
-        <h1>Hi, I'm James!</h1>
-        <br />
-        <p>I'm a 4th-year computer science student studying in Ateneo de Manila University. I love building web-related <a href="https://jamesesguerra.github.io/portfolio/projects.html">projects</a> and learning more about the web as I go.</p>
-        <p>I'm currently learning more about React and web accessibility. I'm also looking forward to apply my skills in the real world.</p>
-    </section>
 
-    <main id="main">
-        <div class="projects">
-            <div class="projects__latest">
-                <span class="accent">LATEST PROJECT</span>
-                <h2>BonfireChat: a live chat app made with Vue.js and Firebase</h2>
-                <p>This project gives you the ability to communicate with people all over the world. Send messages and get real-time replies!</p>
-                <a href="https://bonfire-chat.netlify.app/" target="_blank">View Project →</a>
-            </div>
-
-            <div class="projects__more">
-                <div class="projects__more__header">
-                    <span class="accent">MORE PROJECTS</span>
-                    <a href="https://jamesesguerra.github.io/portfolio/projects.html">
-                        <span>VIEW ALL</span> 
-                        <span>→</span>
-                    </a>
+    <main>
+        <div class="art__wrapper">
+            <div class="art__wrapper__container">
+                <h1>Art</h1>
+                <p>Besides web and software development, another activity I enjoy doing is drawing. I started drawing so that I can make creative cards for my parents during special occassions. Seeing their reactions is always fulfilling and that's why I still do it until now.</p>
+                <p>I mostly draw comic book characters because I like reading comics and I really like the art style. I also don't color my drawings anymore because I'm bad at coloring 😀.</p> 
+            
+                <div class="row gy-4 drawings">
+                    <img class="col col-sm-6 img-fluid" src="assets/images/arcane_drawing.jpg" alt="A drawing of Jinx and Vi from Arcane">
+                    <img class="col col-sm-6 img-fluid" src="assets/images/thanos_drawing.jpg" alt="A drawing of Thanos">
+                    <img class="col col-sm-6 img-fluid" src="assets/images/batgirl_drawing.jpg" alt="A drawing of Batgirl">
+                    <img class="col col-sm-6 img-fluid" src="assets/images/superman_drawing.jpg" alt="A drawing of Superman">
                 </div>
-                
-                <div class="projects__more__container">
-                    <a href="https://teux-deux.netlify.app/" target="_blank">
-                        <div class="projects__more__container__card">
-                            <h3>Todo list app</h3>
-                        </div>
-                    </a>
-                    <a href="https://covid-tracker-io.netlify.app/" target="_blank">
-                        <div class="projects__more__container__card">
-                            <h3>COVID-19 Tracker</h3>
-                        </div>
-                    </a>
-                    <a href="https://pocket-url.netlify.app/" target="_blank">
-                        <div class="projects__more__container__card">
-                            <h3>Link shortener</h3>
-                        </div>
-                    </a>
+
+                <p>Oh and I also like taking pictures! I remember taking this picture of a clownfish with my Samsung flip phone when I was a kid and thought it was such a good picture that it should be featured in a magazine. Ever since then, I've always taken pictures of random things when I go outside. I'm not that good but I still really enjoy it. I also can't wait to buy my own DSLR camera in the future because I've only been using my smartphone for all my pictures. Enjoy!</p>
+
+                <div class="row gy-4">
+                    <img class="col col-sm-6 img-fluid" src="assets/images/flower_picture1.jpg" alt="">
+                    <img class="col col-sm-6 img-fluid" src="assets/images/jellyfish_picture.jpg" alt="">
+                    <img class="col col-sm-6 img-fluid" src="assets/images/boat_picture.jpg" alt="">
+                    <img class="col col-sm-6 img-fluid" src="assets/images/flower_picture2.jpg" alt="">
                 </div>
             </div>
+            
         </div>
 
-        <div class="stack">
-            <div class="stack__wrapper">
-                <span class="accent">MY TECH STACK</span>
-                <div class="stack__container">
-                    <div class="stack__container__card">
-                        <h3>Frontend</h3>
-                        <ul>
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>Bootstrap</li>
-                            <li>SASS</li>
-                            <li>Javascript</li> 
-                            <li>jQuery</li>
-                            <li>Vue.js</li>
-                            <li>React.js</li>
-                        </ul>
-                    </div>
-                    <div class="stack__container__card">
-                        <h3>Backend</h3>
-                        <ul>
-                            <li>Node.js</li>
-                            <li>Python</li>
-                            <li>PHP</li>
-                            <li>Java</li>
-                            <li>Django</li>
-                            <li>Laravel</li>
-                            <li>SQL</li>
-                            <li>NoSQL</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
     </main>
 
-    <section class="contact" id="contact">
-        <div class="contact__wrapper">
-            <h2>Contact</h2>
-            <form class="contact__form" data-bss-recipient="12140877fd3665a2fd4f7c3c27df2351">
-                <div class="mb-3"><label class="form-label" for="name">Name</label><input class="form-control item" type="text" id="name" required=""></div>
-                <div class="mb-3"><label class="form-label" for="email">Email</label><input class="form-control item" type="email" id="email" required=""></div>
-                <div class="mb-3"><label class="form-label" for="message">Message</label><textarea class="form-control item" id="message" required=""></textarea></div>
-                <div class="mb-3"><button class="btn btn-primary btn-lg d-block w-100" type="submit">Submit</button></div>
-            </form>
-        </div>
-    </section>
 
     <footer class="footer">
         <div class="footer__social">
@@ -175,9 +109,8 @@
         <h5>Quezon City, Philippines</h5>
     </footer>
 
+
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/smart-forms.min.js"></script>
     <script src="script.js"></script>
 </body>
-
-</html>
