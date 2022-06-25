@@ -24,6 +24,7 @@ body {
     --clr-slate-gray: #8b97a8;
     --clr-dark-slate-gray: #1c2739;
     --clr-white: #fff;
+    --clr-white-fade: rgba(255, 255, 255, 0.85);
     --clr-about-contact-white: #fff;
     --clr-orange: #ea580c;
     --clr-black: #000;
@@ -41,6 +42,7 @@ body {
     --clr-dark-gray: #81828a;
     --clr-slate-gray: #8b97a8;
     --clr-white: #0f1629;
+    --clr-white-fade: rgba(15, 23, 42, 0.85);
     --clr-about-contact-white:#1c2739;
     --clr-orange: #D84000;
     --clr-black: #fff;
@@ -69,7 +71,7 @@ body {
 
 nav {
     padding: 1.2rem 1.2rem 0rem 1.2rem;
-    background: var(--clr-white);
+    background: var(--clr-white-fade);
     position: fixed;
     top: 0;
     left: 0;
@@ -353,7 +355,10 @@ p {
     color: var(--clr-p);
 }
 
-
+.frosty {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
 
 // projects
 .projects__wrapper {
