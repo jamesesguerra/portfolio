@@ -150,6 +150,9 @@ nav .nav ul li:nth-child(-n+3):hover {
   padding-bottom: 5rem;
 }
 .projects__latest p {
+  margin-bottom: 1rem;
+}
+.projects__latest p:nth-child(4) {
   margin-bottom: 2rem;
 }
 .projects__latest a {
