@@ -176,6 +176,7 @@ nav .nav ul li:nth-child(-n+3):hover {
   color: var(--clr-black);
   align-self: flex-start;
   letter-spacing: 1px;
+  margin-top: 10px;
 }
 .projects__more__header a:hover span:nth-of-type(1) {
   border-bottom: 1px solid var(--clr-black);
